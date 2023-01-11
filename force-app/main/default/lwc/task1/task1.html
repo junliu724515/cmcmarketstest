@@ -1,0 +1,24 @@
+<!--
+ - Created by junliu on 1/11/23.
+ -->
+
+<!-- Task 1 -->
+<template>
+    <div class="slds-m-top_small slds-m-bottom_medium container">
+        <lightning-file-upload
+                label="Upload 1000 Contacts"
+                name="fileUploader"
+                accept={acceptedFormats}
+                onuploadfinished={handleUploadFinished}>
+        </lightning-file-upload>
+        <lightning-spinner alternative-text="Loading" size="medium" if:true={showSpinner}></lightning-spinner>
+        <lightning-button label="Delete Test Contacts" variant="brand" title="Non-primary action" onclick={handleReset}
+                          class="slds-m-left_x-small"></lightning-button>
+
+        <lightning-card class="slds-text-align_center">
+            <a></a>
+        </lightning-card>
+
+    </div>
+
+</template>
